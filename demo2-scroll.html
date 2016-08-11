@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.js"></script>
+  <style>
+    body {
+      height: 2000px;
+      padding-top: 500px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <span>scroll次数:</span><span id="times">0</span>
+<script>
+  $(function() {
+    $(window).scroll(function() {
+      $('#times').text(parseInt($('#times').text())+1);
+    });
+  });
+</script>
+</body>
+</html>

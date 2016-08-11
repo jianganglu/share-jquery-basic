@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.js"></script>
+  <style>
+  </style>
+</head>
+<body>
+  <label id="click1" for="">点击标签</label>
+  <br/>
+  <label id="hover1" for="">悬停标签</label>
+  <br/>
+  <input type="text" id="input1" placeholder="请输入">
+  <input type="text" id="input2" placeholder="请输入up">
+  <input type="text" id="input3" placeholder="请输入down">
+  <input type="text" id="input4" placeholder="请输入press">
+  <span>显示效果</span><span id="target1"></span>
+  <br/>
+  <span id="t_on">on 的点击事件</span><br/>
+  <span id="t_bind">bind 的点击事件</span><br/>
+  <span id="t_trigger">trigger 的点击事件</span><br/>
+<script>
+  $(function() {
+    $('#click1').on('click', function() {
+      console.log('你点击了我');
+    });
+
+    $('#hover1').hover(function() {
+      console.log('你来了');
+    }, function() {
+      console.log('不送');
+    });
+
+    $('#input1').on('blur', function() {
+      alert('blur 事件');
+    });
+
+    $('#input1').on('focus', function() {
+      alert('focus 事件');
+    });
+
+    // $('#input2').on('keyup', function() {
+    //   alert('keyup 事件');
+    // });
+
+    // $('#input3').on('keydown', function() {
+    //   alert('keydown 事件');
+    // });
+
+    // $('#input4').on('keypress', function() {
+    //   alert('keypress 事件');
+    // });
+
+    $('#input2').on('keyup', function() {
+      $('#target1').text($(this).val());
+    });
+
+    $('#input3').on('keydown', function() {
+      $('#target1').text($(this).val());
+    });
+
+    $('#input4').on('keypress', function() {
+      $('#target1').text($(this).val());
+    });
+
+    $('#t_on').on('click', function() {
+      alert('on click');
+    });
+
+    $('#t_bind').bind('click', function() {
+      alert('bind click');
+    });
+
+    $('#t_trigger').on('click', function() {
+      alert('trigger click');
+      $('#t_on').trigger('click');
+    })
+  });
+</script>
+</body>
+</html>

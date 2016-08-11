@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.js"></script>
+  <style>
+    body, ul, li {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      text-align: center;
+    }
+    ul li {
+      cursor: pointer;
+    }
+    li {
+      list-style: none;
+      clear: both;
+    }
+    div {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    span {
+      width: 200px;
+      height: 40px;
+      display: block;
+      border: 1px solid #000;
+      float: left;
+      text-align: center;
+    }
+    .red {
+      background-color: #f00;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li id="li_1">
+      <span class="class1">class1</span>
+      <span class="class1">class1</span>
+      <span class="class1">class1</span>
+    </li>
+    <li id="li_2">
+      <span class="class2">class2</span>
+      <span class="class2">class2</span>
+      <span class="class2">class2</span>
+    </li>
+    <li id="li_3">
+      <span id="id1">id1</span>
+      <span id="id2">id2</span>
+      <span id="id3">id3</span>
+    </li>
+    <li id="li_4">
+      <span>normal</span>
+      <span>normal</span>
+      <span>normal</span>
+    </li>
+    <li id="li_5">
+      <span><a href="http://www.baidu.com">百度</a></span>
+      <span>新浪</span>
+      <span>阿里</span>
+    </li>
+  </ul>
+  <br><br>
+  <br><br>
+  <br><br>
+  <div>
+    <input type="text" name="in_1" value="in_val_1">
+    <input type="text" name="in_2" value="in_val_2">
+    <input type="text" name="on_3" value="in_val_3">
+    <input type="text" name="on_4" value="in_val_4">
+  </div>
+  <hr/>
+  <h2>这里是操作按钮区域</h2>
+  <span id="sp1">id1选择器</span>
+  <span id="sp2">id2选择器</span>
+  <span id="sp3">id3选择器</span>
+  <span id="sp4">class1选择器</span>
+  <span id="sp5">class2选择器</span>
+  <span id="sp6">span选择器</span>
+  <span id="sp7">#id1, #id2, #id3 选择器</span>
+  <span id="sp8">.class1, .class2 选择器</span>
+  <span id="sp9">#id1, .class2 选择器</span>
+  <span id="sp10">ul span 选择器</span>
+  <span id="sp11">#li_1 > span 选择器</span>
+  <span id="sp12">#id1 + span 选择器</span>
+  <span id="sp13">#id1 ~ span 选择器</span>
+  <span id="sp14">.class1:odd 选择器</span>
+  <span id="sp15">.class1:even 选择器</span>
+  <span id="sp16">#li_5 span:has(a) 选择器</span>
+  <span id="sp17">input[name="in_1"] 选择器</span>
+  <span id="sp18">input[name!="in_1"] 选择器</span>
+  <span id="sp19">input[name$="n_3"] 选择器</span>
+  <span id="sp20">input[name*="n_"] 选择器</span>
+<script>
+  $(function() {
+    // id 选择器
+    $('#sp1').on('click', function() {
+      $('#id1').toggleClass('red');
+    });
+    $('#sp2').on('click', function() {
+      $('#id2').toggleClass('red');
+    });
+    $('#sp3').on('click', function() {
+      $('#id3').toggleClass('red');
+    });
+
+    // class 选择器
+    $('#sp4').on('click', function() {
+      $('.class1').toggleClass('red');
+    });
+    $('#sp5').on('click', function() {
+      $('.class2').toggleClass('red');
+    });
+
+    // 元素选择器
+    $('#sp6').on('click', function() {
+      $('span').toggleClass('red');
+    });
+
+    // 组合选择器
+    // 并列选择器
+    $('#sp7').on('click', function() {
+      $('#id1, #id2, #id3').toggleClass('red');
+    });
+    $('#sp8').on('click', function() {
+      $('.class1, .class2').toggleClass('red');
+    });
+    $('#sp9').on('click', function() {
+      $('#id1, .class2').toggleClass('red');
+    });
+
+    // 家族 后代选择器
+    $('#sp10').on('click', function() {
+      $('ul span').toggleClass('red');
+    });
+
+    // 父子 子元素选择器
+    $('#sp11').on('click', function() {
+      $('#li_1 > span').toggleClass('red');
+    });
+
+    // 紧邻
+    $('#sp12').on('click', function() {
+      $('#id1 + span').toggleClass('red');
+    });
+
+    // 同辈
+    $('#sp13').on('click', function() {
+      $('#id1 ~ span').toggleClass('red');
+    });
+
+    // 伪类
+    $('#sp14').on('click', function() {
+      $('.class1:odd').toggleClass('red');
+    });
+    $('#sp15').on('click', function() {
+      $('.class1:even').toggleClass('red');
+    });
+
+    // has 函数
+    $('#sp16').on('click', function() {
+      $('#li_5 span:has(a)').toggleClass('red');
+    });
+
+    // 属性
+    $('#sp17').on('click', function() {
+      $('input[name="in_1"]').toggleClass('red');
+    });
+    $('#sp18').on('click', function() {
+      $('input[name!="in_1"]').toggleClass('red');
+    });
+    $('#sp19').on('click', function() {
+      $('input[name$="n_3"]').toggleClass('red');
+    });
+    $('#sp20').on('click', function() {
+      $('input[name*="n_"]').toggleClass('red');
+    });
+  });
+</script>
+</body>
+</html>
