@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.js"></script>
+<script>
+  $(function() {
+
+    $(document).ajaxSend(function(evt, request, settings) {
+      console.log('ajaxSend');
+    });
+
+    $(document).ajaxComplete(function(evt, request, settings) {
+      console.log('ajaxComplete');
+    });
+
+    $(document).ajaxSuccess(function(evt, request, settings) {
+      console.log('ajaxSuccess');
+    });
+
+    $(document).ajaxError(function(evt, request, settings) {
+      console.log('ajaxError');
+    });
+
+    $.ajax({
+      type: 'GET',
+      url: '/data/data.json',
+      dataType: 'JSON',
+      contentType: 'application/json; charset=UTF-8'
+    }).done(function(resp) {
+      
+    });
+  });
+</script>
+</body>
+</html>

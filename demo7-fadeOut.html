@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <p>fadeOut</p>
+<script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.js"></script>
+<script>
+  $(function() {
+    $('p').fadeOut(300, function() { $(this).remove(); });
+  });
+</script>
+</body>
+</html>
