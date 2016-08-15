@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<ul>
+  <li>
+    <a href="##">我的微博</a>
+  </li>
+  <li>
+    <a href="##">我的博客</a>
+  </li>
+  <li>
+    <a href="##">我的小站</a>
+  </li>
+</ul>
+<script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.js"></script>
+<script>
+  $(function() {
+    $.fn.myPlugin = function(options) {
+      var defaults = {
+        'color': 'red',
+        'fontSize': '12px'
+      };
+      var settings = $.extend({}, defaults, options);
+      return this.css({
+        'color': settings.color,
+        'fontSize': settings.fontSize
+      });
+    }
+
+    $('a').myPlugin({
+      'color': '#2C9929',
+      'fontSize': '20px'
+    });
+  });
+</script>
+</body>
+</html>

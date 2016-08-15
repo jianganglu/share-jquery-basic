@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <button id="btn1">one</button>
+<script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.js"></script>
+<script>
+  $(function() {
+    $('#btn1').one('click', function() {
+      console.log('click');
+    });
+  });
+</script>
+</body>
+</html>
