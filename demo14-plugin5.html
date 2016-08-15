@@ -18,7 +18,7 @@
 </ul>
 <script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.js"></script>
 <script>
-  (function() {
+  (function($) {
     //定义Beautifier的构造函数
     var Beautifier = function(ele, opt) {
       this.$element = ele,
@@ -46,7 +46,7 @@
       //调用其方法
       return beautifier.beautify();
     }
-  })();
+  })(jQuery);
 
   $(function() {
     $('a').myPlugin({
