@@ -1,0 +1,22 @@
+﻿<html>
+<head>
+  <title>end方法测试</title>
+</head>
+<body>
+  <div>
+    <h3></h3>
+    <h3></h3>
+    <h3></h3>
+  </div>
+  <script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.js"></script>
+  <script>
+    $('div')
+      .find('h3')
+    　.eq(2)
+    　.html('Hello')
+    　.end()          //退回到选中所有的h3元素
+    　.eq(0)          //选中第一个h3元素
+    　.html('World'); //将它的内容改为World
+  </script>
+</body>
+</html>
