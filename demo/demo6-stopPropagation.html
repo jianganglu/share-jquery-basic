@@ -28,7 +28,7 @@
     $(':button').on('click', function(event){
       alert('button-click');
       // 阻止事件冒泡到DOM树上
-      // event.stopPropagation(); // 只执行button的click，如果注释掉该行，将执行button、p和div的click   
+      event.stopPropagation(); // 只执行button的click，如果注释掉该行，将执行button、p和div的click   
     } );
   });
 </script>

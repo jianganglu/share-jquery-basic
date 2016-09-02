@@ -24,7 +24,7 @@ $(".bgRed div")        //选择CSS类为bgRed的元素中的所有<div>元素.
 
 $(".myList>li")        //选择CSS类为myList元素中的直接子节点<li>对象.
 
-$("#news+img")         //选在id为news元素后面的img对象.(同级节点)
+$("#news+img")         //选择id为news元素后面的img对象.(同级节点)
 
 $("#someDiv~[title]")  //选择id为someDiv的对象后面所有带有title属性的元素
 

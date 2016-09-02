@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+<div id="btn-options">
+  <button id="btn1" class="btn btn-primary">button1</button>
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+<script>
+  $(function() {
+    $('#btn1').on('click', function() {
+      $('#btn-options').append('<button id="btn2" class="btn btn-primary">button2</button>');
+    });
+
+    // $('#btn2').click(function() {
+    //   alert('btn2');
+    // });
+
+    $('#btn-options').on('click', '#btn2', function() {
+      alert('btn2');
+    });
+  });
+</script>
+</body>
+</html>
