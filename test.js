@@ -1,32 +1,32 @@
 ﻿
 
-$("#testDiv").addClass("active");
+$('#testDiv').addClass('active');
 
-var domObject = $("#testDiv")[0];
+var domObject = $('#testDiv')[0];
 
 // 基本选择器
 
-$("#divId")            //选择ID为divId的元素
+$('#divId')            //选择ID为divId的元素
 
-$(".bgRed")            //选择所用CSS类为bgRed的元素
+$('.bgRed')            //选择所用CSS类为bgRed的元素
 
-$("a")                 //选择所有<a>元素
+$('a')                 //选择所有<a>元素
 
-$("#divId, a, .bgRed") //依次选择对应元素
+$('#divId, a, .bgRed') //依次选择对应元素
 
-$("*")                 //选择页面所有元素
+$('*')                 //选择页面所有元素
 
-//-------------------------------分割线------------------------------------------
+//-------------------------------分割线----------------------------------
 
 // 层叠选择器
 
-$(".bgRed div")        //选择CSS类为bgRed的元素中的所有<div>元素.
+$('.bgRed div')        //选择CSS类为bgRed的元素中的所有<div>元素.
 
-$(".myList>li")        //选择CSS类为myList元素中的直接子节点<li>对象.
+$('.myList>li')        //选择CSS类为myList元素中的直接子节点<li>对象.
 
-$("#news+img")         //选择id为news元素后面的img对象.(同级节点)
+$('#news+img')         //选择id为news元素后面的img对象.(同级节点)
 
-$("#someDiv~[title]")  //选择id为someDiv的对象后面所有带有title属性的元素
+$('#someDiv~[title]')  //选择id为someDiv的对象后面所有带有title属性的元素
 
 
 $('div').has('p');           //选择包含p元素的div元素

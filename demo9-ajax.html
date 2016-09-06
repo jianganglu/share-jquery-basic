@@ -5,17 +5,20 @@
   <title></title>
 </head>
 <body>
+  <button id="btn">获取数据</button>
 <script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.js"></script>
 <script>
   $(function() {
 
-    $.ajax({
-      type: 'GET',   //(默认: "GET") 请求方式 ("POST" 或 "GET")
-      url: '/data/data.json', //(默认: 当前页地址) 发送请求的地址。
-      dataType: 'JSON', //预期服务器返回的数据类型
-      contentType: 'application/json; charset=UTF-8' //发送信息至服务器时内容编码类型
-    }).done(function(resp) {
-      console.log(resp.data);
+    $('#btn').on('click', function() {
+      $.ajax({
+        type: 'GET',   //(默认: "GET") 请求方式 ("POST" 或 "GET")
+        url: '/data/data.json', //(默认: 当前页地址) 发送请求的地址。
+        dataType: 'JSON', //预期服务器返回的数据类型
+        contentType: 'application/json; charset=UTF-8' //发送信息至服务器时内容编码类型
+      }).done(function(resp) {
+        console.log(resp.data);
+      });
     });
 
     // $.ajax({
