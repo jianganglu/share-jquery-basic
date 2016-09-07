@@ -18,13 +18,13 @@
       $('#btn-options').append('<button id="btn2" class="btn btn-primary">button2</button>');
     });
 
-    $('#btn2').click(function() {
-      alert('btn2');
-    });
-
-    // $('#btn-options').on('click', '#btn2', function() {
+    // $('#btn2').click(function() {
     //   alert('btn2');
     // });
+
+    $('#btn-options').on('click', '#btn2', function() {
+      alert('btn2');
+    });
   });
 </script>
 </body>

@@ -8,7 +8,7 @@ var domObject = $('#testDiv')[0];
 
 $('#divId')            //选择ID为divId的元素
 
-$('.bgRed')            //选择所用CSS类为bgRed的元素
+$('.bgRed')            //选择所有CSS类为bgRed的元素
 
 $('a')                 //选择所有<a>元素
 
